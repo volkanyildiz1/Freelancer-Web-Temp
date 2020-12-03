@@ -1,0 +1,353 @@
+    /* general settings*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 10px;
+}
+body{
+    font-family: 'Lato', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.5;
+    background-color: #fff;
+}
+h1,h2,h3,h4,h5,h6{
+    font-size: 700;
+    font-family: 'Montserrat', sans-serif;
+}
+.btn_about{
+    margin-top: 3rem ;
+    font-size: 2rem;
+    padding: 2rem 1rem;
+    font-weight: 400;
+    display: inline-block;
+    background-color: transparent;
+    border-radius: .5rem;
+    border: 2px solid #fff;
+    color: #fff;
+    /* butonun üzerine maus geldiğinde şekil değişsin */
+    cursor: pointer;
+    transition: all .5s;
+}
+.btn_about:hover{
+    background-color: #fff;
+    color: #212529;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style-type: none;
+}
+.img-fluid{
+    max-width: 100%;
+    height: auto;
+}
+.container{
+    width: 100%;
+}
+#container_nav{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: .5rem;
+    padding-right: .5rem;
+}
+.clearfix::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.logo_uppercase{
+    text-transform: uppercase;
+}
+   /* Navbar */
+nav{
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+    background: #2c3e50;
+    color: #fff;
+    padding-top: 2.4rem;
+    padding-bottom: 2.4rem;
+    position: fixed;
+    /*ikonların üzerinde görünmesini engelliyoruz*/
+    z-index: 500;
+}
+#logo_box .logo_a{
+    color: #fff;
+    font-weight: 700;
+    font-size: 3.2rem;
+}
+#logo_box{
+    float: left;
+    padding-top: .5rem;
+}
+#nav_links{
+    float: right;
+}
+#nav_links li{
+    float: left;
+    margin: .2rem;
+    padding-top: 1.5rem;
+}
+#nav_links .nav_link{
+    color: #fff;
+    font-size: 1.6rem;
+    font-weight: 700;
+    display: block;
+    padding: .4rem;
+    letter-spacing: .1rem;
+}
+#nav_links .nav_link:hover{
+    color:#18bc9c;
+    transition: .3s;
+}
+/* Header */
+header{
+    background-color: #18bc9c;
+    /*burası cok önemli..nav dan sonra header nerede başlayacagını hesaplamamız gerekir*/
+    /* ayrıca responsive tasarıma uyum için başlangıcı px bulduktan sonra rem ile devam etmeliyiz*/
+    padding-top:calc(112px + 10em);
+    /*ikisi farklı format oldugu için css -calc fonksiyounu le hesaplıyoruz..*/
+    padding-bottom: 112px;
+    text-align: center;
+}
+
+header h1{
+    color: #fff;
+    font-size: 7.6rem;
+    text-transform: uppercase;
+}
+.star_white{
+    border: none;
+    border-top: .4rem solid #fff;
+    max-width: 25rem;
+    margin: 2.5rem auto;
+    /*yukarı kayan ikonun görünmesini sağlıyoruz*/
+    overflow: visible;
+    height: 0;
+}
+/* ikon ekliyoruz */
+.star_white::after{
+    content:"\f005";
+    font-family:"Font Awesome 5 Free";
+    color: #fff;
+    /* ikonun içini doldurup boyayalım*/
+    font-weight: 900;
+    font-size: 3.2rem;
+    padding-left: 8px;
+    padding-right: 8px;
+    /* olduğu konumdan yukarıya alacağız*/
+    position: relative;
+    top: -26px;
+    background-color: #18bc9c;   
+}
+header h2{
+    color: #fff;
+    font-size: 2.8rem;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+}
+/* Portfolio*/
+#portfolio{
+    padding-top: 10rem;
+    padding-bottom: 65rem;
+    text-align: center;
+}
+#portfolio h2{
+    text-transform: uppercase;
+    font-size:4.8rem;
+    color: #2c3e50;
+}
+.star_dark{
+    border: none;
+    border-top: .4rem solid#2c3e50;
+    max-width: 25rem;
+    margin: 2.5rem auto;
+    /*yukarı kayan ikonun görünmesini sağlıyoruz*/
+    overflow: visible;
+    height: 0;
+}
+.star_dark::after{
+    content:"\f005";
+    font-family:"Font Awesome 5 Free";
+    color: #2c3e50;
+    /* ikonun içini doldurup boyayalım*/
+    font-weight: 900;
+    font-size: 3.2rem;
+    padding-left: 8px;
+    padding-right: 8px;
+    /* olduğu konumdan yukarıya alacağız*/
+    position: relative;
+    top: -26px;
+    background-color: #fff;
+} 
+.img_box{
+    width: 33.3333%;
+    padding: 10px;
+    float: left;
+    position: relative;
+}
+.img_box img{
+    display: block;
+}
+.img_hover{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 93%;
+    width: 95%;
+    background-color: #18bc9c;
+    margin-top: 9.7px;
+    margin-left: 8.9px;
+    opacity: 0;
+}
+.img_box .img_icon{
+    color: #fff;
+    font-size: 2rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.img_box:hover .img_hover{
+    opacity: 0.7;
+    transition: 1s;
+}
+/* About*/
+#about{
+    background-color: #18bc9c;
+    color: #fff;
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+    text-align: center;
+}
+#about h2{
+    text-transform: uppercase;
+    font-size:4.8rem;
+    color: #fff;
+}
+#about_text{
+    text-align: left;
+}
+#about_text .text_left{
+    float: left;
+    width: 50%;
+    padding-right: 2rem;
+    padding-left: 20rem;
+}
+#about_text .text_right{
+    float: right;
+    width: 50%;
+    padding-left: 2rem;
+    padding-right: 20rem;
+}
+#about_text .text{
+    font-size: 2rem;
+    line-height: 1.5;
+    font-family: 'Lato', sans-serif;
+}
+     /* contact */
+#contact{
+    padding-top: 10rem;
+    padding-bottom: 5rem;
+    text-align: center;
+}
+#contact h2{
+    text-transform: uppercase;
+    font-size:4.8rem;
+    color: #2c3e50;
+}
+.form_container{
+    width: 700px;
+    margin: 0 auto;
+    border-bottom: 1px solid #e9ecef;
+    padding-bottom: 3rem;
+    margin-bottom: 4rem;
+    text-align: left;
+}
+.input{
+   border: none;
+   width: 100%;
+   display: inline-block;
+   font-size: 2.2rem;
+}
+.input:focus{
+    outline: 0;
+}
+#container_send{
+    border-bottom: none;
+}
+#btn_send{
+    margin-top: 2.5rem ;
+    font-size: 1.5rem;
+    padding: 1.3rem .8rem;
+    font-weight: 400;
+    display: inline-block;
+    background-color: #18bc9c;
+    border-radius: .5rem;
+    border: 2px solid #fff;
+    color: #fff;
+    /* butonun üzerine maus geldiğinde şekil değişsin */
+    cursor: pointer;
+    transition: all .5s;
+    
+}
+#btn_send:hover{
+    background-color:#128f76;
+    border-color: #128f76;
+}
+footer{
+    height: 255px;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    background-color:#2c3e50;
+    color: #fff;
+    text-align: left;
+}
+footer h4{
+    text-transform: uppercase;
+    font-size: 2.4rem;
+}
+.footer_box{
+    width: 33.3333%;
+    padding: 10px;
+    text-align: center;
+    float: left;
+    position: relative;
+}
+footer p{
+    margin-top: 1rem;
+    font-size: 2rem;
+    line-height: 1.5;
+    font-family: 'Lato', sans-serif;
+}
+.btn_footer{
+    width: 5rem;
+    height: 5rem;
+    margin-right: 1rem;
+    font-size: 2rem;
+    line-height: 2rem;
+    display: inline-block;
+    background-color: transparent;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    color: #fff;
+    /* butonun üzerine maus geldiğinde şekil değişsin */
+    cursor: pointer;
+    transition: all .5s;
+}
+.btn_footer:hover{
+    background-color: #fff;
+    color: #212529;
+}
+#copyright{
+    background-color: #000000;
+    color: #fff;
+    padding-top: 2.4rem;
+    padding-bottom: 2.4rem;
+    text-align: center;
+}
